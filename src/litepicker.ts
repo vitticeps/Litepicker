@@ -138,7 +138,7 @@ export class Litepicker extends Calendar {
     document.addEventListener('click', e => this.onClick(e), true);
 
     this.picker = document.createElement('div');
-    this.picker.className = style.litepicker;
+    this.picker.className = style.litepicker+(this.options.hasOwnProperty("className")?" "+this.options.className:"");
     this.picker.style.display = 'none';
     this.picker.addEventListener('mouseenter', e => this.onMouseEnter(e), true);
     this.picker.addEventListener('mouseleave', e => this.onMouseLeave(e), false);
